@@ -1,9 +1,11 @@
-using System.Diagnostics;
 using Collect_Go2._0.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
 
 namespace Collect_Go2._0.Controllers
 {
+  
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -15,6 +17,11 @@ namespace Collect_Go2._0.Controllers
 
         public IActionResult Index()
         {
+            if (User.Identity != null && User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Stores");
+            }
+
             return View();
         }
 

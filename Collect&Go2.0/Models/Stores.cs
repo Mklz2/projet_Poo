@@ -1,6 +1,6 @@
 ﻿namespace Collect_Go2._0.Models
 {
-    public class Store
+    public class Stores
     {
         public int Id { get; set; }
 

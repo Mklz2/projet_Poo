@@ -6,13 +6,13 @@ using Microsoft.AspNetCore.Authorization;
 namespace Collect_Go2._0.Controllers
 {
     [Authorize]
-    public class StoreController : Controller
+    public class StoresController : Controller
     {
         public IActionResult Index()
         {
-            StoreRepository repository = new StoreRepository();
+            StoresRepository repository = new StoresRepository();
 
-            List<Store> stores = repository.GetAllStores();
+            List<Stores> stores = repository.GetAllStores();
 
             return View(stores);
         }

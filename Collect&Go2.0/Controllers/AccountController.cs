@@ -50,22 +50,7 @@ namespace Collect_Go2._0.Controllers
             return View();
         }
 
-        //[HttpPost]
-        //public IActionResult Login(string email, string password)
-        //{
-        //    UserRepository repository = new UserRepository();
 
-        //    User user = repository.GetUserByEmailAndPassword(email, password);
-
-        //    if (user != null)
-        //    {
-        //        return RedirectToAction("Index", "Home");
-        //    }
-
-        //    ViewBag.Error = "Email ou mot de passe incorrect.";
-
-        //    return View();
-        //}
 
         [HttpPost]
         public async Task<IActionResult> Login(string email, string password)
@@ -93,7 +78,7 @@ namespace Collect_Go2._0.Controllers
                     CookieAuthenticationDefaults.AuthenticationScheme,
                     principal);
 
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Stores");
             }
 
             ViewBag.Error = "Email ou mot de passe incorrect.";
