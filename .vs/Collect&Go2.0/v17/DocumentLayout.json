@@ -1,12 +1,105 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\melvi\\Documents\\POO\\Porgrammation objet\\niv 2.1\\exercice\\Collect\u0026Go2.0\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|c:\\users\\joker\\desktop\\nouveau projet\\projet_poo\\collect\u0026go2.0\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|solutionrelative:collect\u0026go2.0\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|c:\\users\\joker\\desktop\\nouveau projet\\projet_poo\\collect\u0026go2.0\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|solutionrelative:collect\u0026go2.0\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|c:\\users\\joker\\desktop\\nouveau projet\\projet_poo\\collect\u0026go2.0\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|solutionrelative:collect\u0026go2.0\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|c:\\users\\joker\\desktop\\nouveau projet\\projet_poo\\collect\u0026go2.0\\collect\u0026go2.0.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|solutionrelative:collect\u0026go2.0\\collect\u0026go2.0.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|c:\\users\\joker\\desktop\\nouveau projet\\projet_poo\\collect\u0026go2.0\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|solutionrelative:collect\u0026go2.0\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Collect\u0026Go2.0\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Collect\u0026Go2.0\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-10T10:14:00.747Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Collect\u0026Go2.0\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Collect\u0026Go2.0\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAowHsAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-10T10:13:28.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "Collect\u0026Go2.0\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "Collect\u0026Go2.0\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-08-10T10:01:16.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Collect\u0026Go2.0",
+              "DocumentMoniker": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj",
+              "RelativeDocumentMoniker": "Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj",
+              "ToolTip": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj",
+              "RelativeToolTip": "Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-08-10T09:46:14.728Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Program.cs",
+              "RelativeDocumentMoniker": "Collect\u0026Go2.0\\Program.cs",
+              "ToolTip": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Program.cs",
+              "RelativeToolTip": "Collect\u0026Go2.0\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-10T09:43:54.06Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

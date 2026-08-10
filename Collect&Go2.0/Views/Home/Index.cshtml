@@ -1,8 +1,130 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿
+@{
+    ViewData["Title"] = "Accueil";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!-- Hero -->
+<section class="bg-primary text-white rounded-4 p-5 mb-5">
+    <div class="container py-4">
+        <div class="row align-items-center">
+
+            <div class="col-lg-7">
+                <h1 class="display-4 fw-bold">
+                    Vos courses, simplement.
+                </h1>
+
+                <p class="lead mt-3">
+                    Commandez vos produits en ligne, choisissez votre magasin
+                    et votre créneau de retrait, puis récupérez vos courses
+                    directement en magasin.
+                </p>
+
+                <div class="mt-4">
+                    <a asp-controller="Account"
+                       asp-action="Login"
+                       class="btn btn-light btn-lg me-2">
+                        Se connecter
+                    </a>
+
+                    <a asp-controller="Account"
+                       asp-action="Register"
+                       class="btn btn-outline-light btn-lg">
+                        Créer un compte
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-5 text-center mt-4 mt-lg-0">
+                <div class="bg-white text-primary rounded-circle d-inline-flex
+                            align-items-center justify-content-center"
+                     style="width: 220px; height: 220px;">
+                    <span class="display-1">🛒</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Fonctionnement -->
+<section class="mb-5">
+
+    <div class="text-center mb-4">
+        <h2 class="fw-bold">Comment ça fonctionne ?</h2>
+        <p class="text-muted">
+            Faites vos courses en quelques étapes.
+        </p>
+    </div>
+
+    <div class="row g-4">
+
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body text-center p-4">
+                    <div class="fs-1 mb-3">🛍️</div>
+                    <h4>1. Choisissez vos produits</h4>
+                    <p class="text-muted">
+                        Parcourez les produits classés par catégories
+                        et choisissez les quantités souhaitées.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body text-center p-4">
+                    <div class="fs-1 mb-3">📍</div>
+                    <h4>2. Choisissez votre magasin</h4>
+                    <p class="text-muted">
+                        Sélectionnez le point de retrait qui vous convient
+                        parmi les magasins disponibles.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body text-center p-4">
+                    <div class="fs-1 mb-3">🕐</div>
+                    <h4>3. Choisissez votre créneau</h4>
+                    <p class="text-muted">
+                        Réservez un créneau disponible pour venir
+                        récupérer votre commande.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Informations -->
+<section class="bg-light rounded-4 p-5 mb-5">
+
+    <div class="row align-items-center">
+
+        <div class="col-md-8">
+            <h2 class="fw-bold">Prêt à faire vos courses ?</h2>
+
+            <p class="text-muted mb-0">
+                Préparez votre commande tranquillement depuis chez vous
+                et récupérez-la dans le magasin de votre choix.
+                Le paiement s'effectue directement en magasin.
+            </p>
+        </div>
+
+        <div class="col-md-4 text-md-end mt-3 mt-md-0">
+            <a asp-controller="Account"
+               asp-action="Register"
+               class="btn btn-primary btn-lg">
+                Commencer
+            </a>
+        </div>
+
+    </div>
+
+</section>

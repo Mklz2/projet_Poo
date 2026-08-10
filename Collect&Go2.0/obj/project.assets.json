@@ -8,23 +8,23 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\melvi\\.nuget\\packages\\": {},
+    "C:\\Users\\joker\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\melvi\\Documents\\POO\\Porgrammation objet\\niv 2.1\\exercice\\Collect&Go2.0\\Collect&Go2.0\\Collect&Go2.0.csproj",
+      "projectUniqueName": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect&Go2.0\\Collect&Go2.0.csproj",
       "projectName": "Collect&Go2.0",
-      "projectPath": "C:\\Users\\melvi\\Documents\\POO\\Porgrammation objet\\niv 2.1\\exercice\\Collect&Go2.0\\Collect&Go2.0\\Collect&Go2.0.csproj",
-      "packagesPath": "C:\\Users\\melvi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\melvi\\Documents\\POO\\Porgrammation objet\\niv 2.1\\exercice\\Collect&Go2.0\\Collect&Go2.0\\obj\\",
+      "projectPath": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect&Go2.0\\Collect&Go2.0.csproj",
+      "packagesPath": "C:\\Users\\joker\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect&Go2.0\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\melvi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\joker\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -33,6 +33,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -75,7 +76,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.314/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.312/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
