@@ -3,24 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|c:\\users\\joker\\desktop\\nouveau projet\\projet_poo\\collect\u0026go2.0\\dal\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|solutionrelative:collect\u0026go2.0\\dal\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|c:\\users\\joker\\desktop\\nouveau projet\\projet_poo\\collect\u0026go2.0\\views\\store\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|solutionrelative:collect\u0026go2.0\\views\\store\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|c:\\users\\joker\\desktop\\nouveau projet\\projet_poo\\collect\u0026go2.0\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|solutionrelative:collect\u0026go2.0\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|c:\\users\\joker\\desktop\\nouveau projet\\projet_poo\\collect\u0026go2.0\\models\\store.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|solutionrelative:collect\u0026go2.0\\models\\store.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|c:\\users\\joker\\desktop\\nouveau projet\\projet_poo\\collect\u0026go2.0\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|solutionrelative:collect\u0026go2.0\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|c:\\users\\joker\\desktop\\nouveau projet\\projet_poo\\collect\u0026go2.0\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|solutionrelative:collect\u0026go2.0\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|c:\\users\\joker\\desktop\\nouveau projet\\projet_poo\\collect\u0026go2.0\\controllers\\storecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|solutionrelative:collect\u0026go2.0\\controllers\\storecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|c:\\users\\joker\\desktop\\nouveau projet\\projet_poo\\collect\u0026go2.0\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|solutionrelative:collect\u0026go2.0\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|c:\\users\\joker\\desktop\\nouveau projet\\projet_poo\\collect\u0026go2.0\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|solutionrelative:collect\u0026go2.0\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|c:\\users\\joker\\desktop\\nouveau projet\\projet_poo\\collect\u0026go2.0\\dal\\storerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|solutionrelative:collect\u0026go2.0\\dal\\storerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|c:\\users\\joker\\desktop\\nouveau projet\\projet_poo\\collect\u0026go2.0\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|solutionrelative:collect\u0026go2.0\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,47 +38,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\DAL\\UserRepository.cs",
-              "RelativeDocumentMoniker": "Collect\u0026Go2.0\\DAL\\UserRepository.cs",
-              "ToolTip": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\DAL\\UserRepository.cs",
-              "RelativeToolTip": "Collect\u0026Go2.0\\DAL\\UserRepository.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAYwFAAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-10T11:12:09.522Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "Collect\u0026Go2.0\\Views\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "Collect\u0026Go2.0\\Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAADgAAAAAAAAAAAAYwEMAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-08-10T11:09:31.095Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Collect\u0026Go2.0\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Models\\User.cs",
-              "RelativeToolTip": "Collect\u0026Go2.0\\Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-10T11:07:50.313Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -79,22 +48,87 @@
               "RelativeDocumentMoniker": "Collect\u0026Go2.0\\Controllers\\AccountController.cs",
               "ToolTip": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Controllers\\AccountController.cs",
               "RelativeToolTip": "Collect\u0026Go2.0\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAYwD8AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAYwG4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-10T11:03:53.251Z",
+              "WhenOpened": "2026-08-10T12:06:04.455Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Views\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "Collect\u0026Go2.0\\Views\\Account\\Register.cshtml",
-              "ToolTip": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Views\\Account\\Register.cshtml",
-              "RelativeToolTip": "Collect\u0026Go2.0\\Views\\Account\\Register.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAAAcAAAAcAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Program.cs",
+              "RelativeDocumentMoniker": "Collect\u0026Go2.0\\Program.cs",
+              "ToolTip": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Program.cs",
+              "RelativeToolTip": "Collect\u0026Go2.0\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-10T12:03:19.715Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "StoreRepository.cs",
+              "DocumentMoniker": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\DAL\\StoreRepository.cs",
+              "RelativeDocumentMoniker": "Collect\u0026Go2.0\\DAL\\StoreRepository.cs",
+              "ToolTip": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\DAL\\StoreRepository.cs",
+              "RelativeToolTip": "Collect\u0026Go2.0\\DAL\\StoreRepository.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACcAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-10T11:59:25.321Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Store.cs",
+              "DocumentMoniker": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Models\\Store.cs",
+              "RelativeDocumentMoniker": "Collect\u0026Go2.0\\Models\\Store.cs",
+              "ToolTip": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Models\\Store.cs",
+              "RelativeToolTip": "Collect\u0026Go2.0\\Models\\Store.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-10T11:57:28.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StoreController.cs",
+              "DocumentMoniker": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Controllers\\StoreController.cs",
+              "RelativeDocumentMoniker": "Collect\u0026Go2.0\\Controllers\\StoreController.cs",
+              "ToolTip": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Controllers\\StoreController.cs",
+              "RelativeToolTip": "Collect\u0026Go2.0\\Controllers\\StoreController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-10T11:48:14.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Collect\u0026Go2.0\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Collect\u0026Go2.0\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAAGAAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-08-10T10:53:31.829Z",
+              "WhenOpened": "2026-08-10T11:47:37.069Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Views\\Store\\Index.cshtml",
+              "RelativeDocumentMoniker": "Collect\u0026Go2.0\\Views\\Store\\Index.cshtml",
+              "ToolTip": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Views\\Store\\Index.cshtml",
+              "RelativeToolTip": "Collect\u0026Go2.0\\Views\\Store\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-10T11:47:20.438Z",
               "EditorCaption": ""
             }
           ]
