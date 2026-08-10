@@ -37,7 +37,9 @@
                         </p>
 
                         <div class="d-grid mt-4">
-                            <a href="#"
+                            <a asp-controller="Products"
+                               asp-action="Index"
+                               asp-route-storeId="@store.Id"
                                class="btn btn-primary">
                                 Choisir ce magasin
                             </a>
