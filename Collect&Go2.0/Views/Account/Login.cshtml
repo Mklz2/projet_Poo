@@ -1,0 +1,85 @@
+﻿@{
+    ViewData["Title"] = "Connexion";
+}
+
+<div class="container py-5">
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-6 col-lg-5">
+
+            <div class="card border-0 shadow-sm">
+
+                <div class="card-body p-4 p-md-5">
+
+                    <div class="text-center mb-4">
+                        <div class="fs-1">🛒</div>
+
+                        <h2 class="fw-bold mt-2">
+                            Connexion
+                        </h2>
+
+                        <p class="text-muted">
+                            Connectez-vous pour accéder à votre compte.
+                        </p>
+                    </div>
+
+                    @if (ViewBag.Error != null)
+                    {
+                        <div class="alert alert-danger">
+                            @ViewBag.Error
+                        </div>
+                    }
+
+                    <form asp-action="Login" method="post">
+
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">
+                                Adresse e-mail
+                            </label>
+
+                            <input type="email"
+                                   name="email"
+                                   class="form-control"
+                                   placeholder="exemple@email.com"
+                                   required />
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold">
+                                Mot de passe
+                            </label>
+
+                            <input type="password"
+                                   name="password"
+                                   class="form-control"
+                                   placeholder="Votre mot de passe"
+                                   required />
+                        </div>
+
+                        <button type="submit"
+                                class="btn btn-primary w-100 btn-lg">
+                            Se connecter
+                        </button>
+
+                    </form>
+
+                    <div class="text-center mt-4">
+                        <span class="text-muted">
+                            Pas encore de compte ?
+                        </span>
+
+                        <a asp-action="Register"
+                           class="text-decoration-none">
+                            Créer un compte
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
