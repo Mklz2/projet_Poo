@@ -3,24 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|c:\\users\\joker\\desktop\\nouveau projet\\projet_poo\\collect\u0026go2.0\\dal\\productsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|solutionrelative:collect\u0026go2.0\\dal\\productsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|c:\\users\\joker\\desktop\\nouveau projet\\projet_poo\\collect\u0026go2.0\\interfaces\\iorderdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|solutionrelative:collect\u0026go2.0\\interfaces\\iorderdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|c:\\users\\joker\\desktop\\nouveau projet\\projet_poo\\collect\u0026go2.0\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|solutionrelative:collect\u0026go2.0\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|c:\\users\\joker\\desktop\\nouveau projet\\projet_poo\\collect\u0026go2.0\\interfaces\\iuserdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|solutionrelative:collect\u0026go2.0\\interfaces\\iuserdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|c:\\users\\joker\\desktop\\nouveau projet\\projet_poo\\collect\u0026go2.0\\models\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|solutionrelative:collect\u0026go2.0\\models\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|c:\\users\\joker\\desktop\\nouveau projet\\projet_poo\\collect\u0026go2.0\\interfaces\\itimeslotdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|solutionrelative:collect\u0026go2.0\\interfaces\\itimeslotdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|c:\\users\\joker\\desktop\\nouveau projet\\projet_poo\\collect\u0026go2.0\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|solutionrelative:collect\u0026go2.0\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|c:\\users\\joker\\desktop\\nouveau projet\\projet_poo\\collect\u0026go2.0\\interfaces\\icategorydal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|solutionrelative:collect\u0026go2.0\\interfaces\\icategorydal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|c:\\users\\joker\\desktop\\nouveau projet\\projet_poo\\collect\u0026go2.0\\controllers\\storescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|solutionrelative:collect\u0026go2.0\\controllers\\storescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|c:\\users\\joker\\desktop\\nouveau projet\\projet_poo\\collect\u0026go2.0\\interfaces\\iproductdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|solutionrelative:collect\u0026go2.0\\interfaces\\iproductdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|c:\\users\\joker\\desktop\\nouveau projet\\projet_poo\\collect\u0026go2.0\\interfaces\\istoredal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|solutionrelative:collect\u0026go2.0\\interfaces\\istoredal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|c:\\users\\joker\\desktop\\nouveau projet\\projet_poo\\collect\u0026go2.0\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D6098230-F985-485A-B493-5B2FF7F9BE01}|Collect\u0026Go2.0\\Collect\u0026Go2.0.csproj|solutionrelative:collect\u0026go2.0\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,71 +38,97 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Views\\Products\\Index.cshtml",
-              "RelativeDocumentMoniker": "Collect\u0026Go2.0\\Views\\Products\\Index.cshtml",
-              "ToolTip": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Views\\Products\\Index.cshtml",
-              "RelativeToolTip": "Collect\u0026Go2.0\\Views\\Products\\Index.cshtml",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAUwFMAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-08-10T16:47:56.046Z",
+              "DocumentIndex": 0,
+              "Title": "IOrderDAL.cs",
+              "DocumentMoniker": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Interfaces\\IOrderDAL.cs",
+              "RelativeDocumentMoniker": "Collect\u0026Go2.0\\Interfaces\\IOrderDAL.cs",
+              "ToolTip": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Interfaces\\IOrderDAL.cs",
+              "RelativeToolTip": "Collect\u0026Go2.0\\Interfaces\\IOrderDAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-11T19:37:21.425Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Products.cs",
-              "DocumentMoniker": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Models\\Products.cs",
-              "RelativeDocumentMoniker": "Collect\u0026Go2.0\\Models\\Products.cs",
-              "ToolTip": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Models\\Products.cs",
-              "RelativeToolTip": "Collect\u0026Go2.0\\Models\\Products.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAfAAAAAAAAAA==",
+              "Title": "ITimeSlotDAL.cs",
+              "DocumentMoniker": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Interfaces\\ITimeSlotDAL.cs",
+              "RelativeDocumentMoniker": "Collect\u0026Go2.0\\Interfaces\\ITimeSlotDAL.cs",
+              "ToolTip": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Interfaces\\ITimeSlotDAL.cs",
+              "RelativeToolTip": "Collect\u0026Go2.0\\Interfaces\\ITimeSlotDAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-10T16:47:53.822Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ProductsRepository.cs",
-              "DocumentMoniker": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\DAL\\ProductsRepository.cs",
-              "RelativeDocumentMoniker": "Collect\u0026Go2.0\\DAL\\ProductsRepository.cs",
-              "ToolTip": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\DAL\\ProductsRepository.cs",
-              "RelativeToolTip": "Collect\u0026Go2.0\\DAL\\ProductsRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-10T16:44:41.366Z",
+              "WhenOpened": "2026-08-11T19:36:56.504Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ProductsController.cs",
-              "DocumentMoniker": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Controllers\\ProductsController.cs",
-              "RelativeDocumentMoniker": "Collect\u0026Go2.0\\Controllers\\ProductsController.cs",
-              "ToolTip": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Controllers\\ProductsController.cs",
-              "RelativeToolTip": "Collect\u0026Go2.0\\Controllers\\ProductsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAkAAAAAAAAAA==",
+              "Title": "ICategoryDAL.cs",
+              "DocumentMoniker": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Interfaces\\ICategoryDAL.cs",
+              "RelativeDocumentMoniker": "Collect\u0026Go2.0\\Interfaces\\ICategoryDAL.cs",
+              "ToolTip": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Interfaces\\ICategoryDAL.cs",
+              "RelativeToolTip": "Collect\u0026Go2.0\\Interfaces\\ICategoryDAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-10T16:40:50.606Z",
+              "WhenOpened": "2026-08-11T19:36:44.633Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "StoresController.cs",
-              "DocumentMoniker": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Controllers\\StoresController.cs",
-              "RelativeDocumentMoniker": "Collect\u0026Go2.0\\Controllers\\StoresController.cs",
-              "ToolTip": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Controllers\\StoresController.cs",
-              "RelativeToolTip": "Collect\u0026Go2.0\\Controllers\\StoresController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "IProductDAL.cs",
+              "DocumentMoniker": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Interfaces\\IProductDAL.cs",
+              "RelativeDocumentMoniker": "Collect\u0026Go2.0\\Interfaces\\IProductDAL.cs",
+              "ToolTip": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Interfaces\\IProductDAL.cs",
+              "RelativeToolTip": "Collect\u0026Go2.0\\Interfaces\\IProductDAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-10T16:43:13.927Z",
+              "WhenOpened": "2026-08-11T19:36:10.77Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IStoreDAL.cs",
+              "DocumentMoniker": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Interfaces\\IStoreDAL.cs",
+              "RelativeDocumentMoniker": "Collect\u0026Go2.0\\Interfaces\\IStoreDAL.cs",
+              "ToolTip": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Interfaces\\IStoreDAL.cs",
+              "RelativeToolTip": "Collect\u0026Go2.0\\Interfaces\\IStoreDAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-11T19:33:00.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IUserDAL.cs",
+              "DocumentMoniker": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Interfaces\\IUserDAL.cs",
+              "RelativeDocumentMoniker": "Collect\u0026Go2.0\\Interfaces\\IUserDAL.cs",
+              "ToolTip": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Interfaces\\IUserDAL.cs",
+              "RelativeToolTip": "Collect\u0026Go2.0\\Interfaces\\IUserDAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvw0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-11T19:32:40.824Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Collect\u0026Go2.0\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\joker\\Desktop\\Nouveau Projet\\projet_Poo\\Collect\u0026Go2.0\\Models\\User.cs",
+              "RelativeToolTip": "Collect\u0026Go2.0\\Models\\User.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAADwv10AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-11T19:27:20.542Z",
               "EditorCaption": ""
             }
           ]

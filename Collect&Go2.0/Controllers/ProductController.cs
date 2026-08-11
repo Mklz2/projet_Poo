@@ -6,26 +6,26 @@ using Microsoft.AspNetCore.Mvc;
 namespace Collect_Go2._0.Controllers
 {
     [Authorize]
-    public class ProductsController : Controller
+    public class ProductController : Controller
     {
-        private ProductsRepository _repository;
+        private ProductRepository _repository;
 
-        public ProductsController()
+        public ProductController()
         {
-            _repository = new ProductsRepository();
+            _repository = new ProductRepository();
         }
 
         public IActionResult Index(int? categoryId)
         {
-            List<Products> products;
+            List<Product> product;
 
             if (categoryId.HasValue)
             {
-                products = _repository.GetProductsByCategory(categoryId.Value);
+                product = _repository.GetProductByCategory(categoryId.Value);
             }
             else
             {
-                products = _repository.GetAllProducts();
+                product = _repository.GetAllProduct();
             }
 
             List<Category> categories = _repository.GetAllCategories();
@@ -33,7 +33,7 @@ namespace Collect_Go2._0.Controllers
             ViewBag.Categories = categories;
             ViewBag.SelectedCategory = categoryId;
 
-            return View(products);
+            return View(product);
         }
     }
 }

@@ -12,7 +12,7 @@ namespace Collect_Go2._0.Controllers
         {
             StoresRepository repository = new StoresRepository();
 
-            List<Stores> stores = repository.GetAllStores();
+            List<Store> stores = repository.GetAllStores();
 
             return View(stores);
         }

@@ -4,11 +4,11 @@ using Microsoft.Data.SqlClient;
 
 namespace Collect_Go2._0.DAL
 {
-    public class ProductsRepository
+    public class ProductRepository
     {
         private SqlConnection _connection;
 
-        public ProductsRepository()
+        public ProductRepository()
         {
             string connectionString =
                 "Server=.\\SQLEXPRESS;Database=ClickAndCollect;Trusted_Connection=True;TrustServerCertificate=True;";
@@ -16,15 +16,15 @@ namespace Collect_Go2._0.DAL
             _connection = new SqlConnection(connectionString);
         }
 
-        public List<Products> GetAllProducts()
+        public List<Product> GetAllProduct()
         {
-            List<Products> productList = new List<Products>();
+            List<Product> productList = new List<Product>();
 
             string query = @"SELECT p.ProductId, p.Name, p.Price,
                                     p.Description, p.ImageUrl,
                                     c.CategoryId,
                                     c.Name AS CategoryName
-                             FROM Products p
+                             FROM Product p
                              INNER JOIN Categories c
                              ON p.CategoryId = c.CategoryId";
 
@@ -36,7 +36,7 @@ namespace Collect_Go2._0.DAL
                 {
                     while (reader.Read())
                     {
-                        Products product = new Products();
+                        Product product = new Product();
 
                         product.ProductId = Convert.ToInt32(reader["ProductId"]);
                         product.Name = reader["Name"].ToString();
@@ -59,15 +59,15 @@ namespace Collect_Go2._0.DAL
             return productList;
         }
 
-        public List<Products> GetProductsByCategory(int categoryId)
+        public List<Product> GetProductByCategory(int categoryId)
         {
-            List<Products> productList = new List<Products>();
+            List<Product> productList = new List<Product>();
 
             string query = @"SELECT p.ProductId, p.Name, p.Price,
                                     p.Description, p.ImageUrl,
                                     c.CategoryId,
                                     c.Name AS CategoryName
-                             FROM Products p
+                             FROM Product p
                              INNER JOIN Categories c
                              ON p.CategoryId = c.CategoryId
                              WHERE p.CategoryId = @CategoryId";
@@ -82,7 +82,7 @@ namespace Collect_Go2._0.DAL
                 {
                     while (reader.Read())
                     {
-                        Products product = new Products();
+                        Product product = new Product();
 
                         product.ProductId = Convert.ToInt32(reader["ProductId"]);
                         product.Name = reader["Name"].ToString();

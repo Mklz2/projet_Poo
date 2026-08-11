@@ -16,9 +16,9 @@ namespace Collect_Go2._0.DAL
             _connection = new SqlConnection(connectionString);
         }
 
-        public List<Stores> GetAllStores()
+        public List<Store> GetAllStores()
         {
-            List<Stores> storeList = new List<Stores>();
+            List<Store> storeList = new List<Store>();
 
             string query = "SELECT * FROM Stores";
 
@@ -30,7 +30,7 @@ namespace Collect_Go2._0.DAL
                 {
                     while (reader.Read())
                     {
-                        Stores store = new Stores();
+                        Store store = new Store();
 
                         store.Id = Convert.ToInt32(reader["StoreId"]);
                         store.Name = reader["Name"].ToString();
@@ -46,9 +46,9 @@ namespace Collect_Go2._0.DAL
             return storeList;
         }
 
-        public Stores GetStoreById(int id)
+        public Store GetStoreById(int id)
         {
-            Stores store = null;
+            Store store = null;
 
             string query = "SELECT * FROM Stores WHERE Id = @Id";
 
@@ -62,7 +62,7 @@ namespace Collect_Go2._0.DAL
                 {
                     if (reader.Read())
                     {
-                        store = new Stores();
+                        store = new Store();
 
                         store.Id = Convert.ToInt32(reader["StoreId"]);
                         store.Name = reader["Name"].ToString();
