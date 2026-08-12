@@ -1,5 +1,5 @@
 ﻿
-@model User
+@model Collect_Go2._0.ViewModels.RegisterViewModel
 
 @{
     ViewData["Title"] = "Créer un compte";
@@ -36,32 +36,48 @@
 
                         <!-- Prénom -->
                         <div class="mb-3">
-                            <label asp-for="FirstName"
+                            <label asp-for="Firstname"
                                    class="form-label fw-semibold">
                                 Prénom
                             </label>
 
-                            <input asp-for="FirstName"
+                            <input asp-for="Firstname"
                                    class="form-control"
                                    placeholder="Votre prénom" />
 
-                            <span asp-validation-for="FirstName"
+                            <span asp-validation-for="Firstname"
                                   class="text-danger">
                             </span>
                         </div>
 
                         <!-- Nom -->
                         <div class="mb-3">
-                            <label asp-for="LastName"
+                            <label asp-for="Lastname"
                                    class="form-label fw-semibold">
                                 Nom
                             </label>
 
-                            <input asp-for="LastName"
+                            <input asp-for="Lastname"
                                    class="form-control"
                                    placeholder="Votre nom" />
 
-                            <span asp-validation-for="LastName"
+                            <span asp-validation-for="Lastname"
+                                  class="text-danger">
+                            </span>
+                        </div>
+
+                        <!-- Téléphone -->
+                        <div class="mb-3">
+                            <label asp-for="Phone"
+                                   class="form-label fw-semibold">
+                                Téléphone
+                            </label>
+
+                            <input asp-for="Phone"
+                                   class="form-control"
+                                   placeholder="Votre numéro de téléphone" />
+
+                            <span asp-validation-for="Phone"
                                   class="text-danger">
                             </span>
                         </div>

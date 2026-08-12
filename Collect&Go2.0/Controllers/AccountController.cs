@@ -1,5 +1,6 @@
-﻿using Collect_Go2._0.DAL;
+using Collect_Go2._0.Interfaces;
 using Collect_Go2._0.Models;
+using Collect_Go2._0.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication;
@@ -10,6 +11,13 @@ namespace Collect_Go2._0.Controllers
 {
     public class AccountController : Controller
     {
+        private readonly IUserDAL _userDal;
+
+        public AccountController(IUserDAL userDal)
+        {
+            _userDal = userDal;
+        }
+
         [HttpGet]
         public IActionResult Register()
         {
@@ -17,31 +25,31 @@ namespace Collect_Go2._0.Controllers
         }
 
         [HttpPost]
-        public IActionResult Register(User user)
+        public async Task<IActionResult> Register(RegisterViewModel model)
         {
-            if (ModelState.IsValid)
-            {
-                user.Role = "Client";
-                user.StoreId = null;
-
-                UserRepository repository = new UserRepository();
-
-                bool result = repository.AddUser(user);
-                Console.WriteLine($"Utilisateur ajouté : {result}");
-                if (result)
-                {
-                    return RedirectToAction("Login");
-                }
-            }
             if (!ModelState.IsValid)
             {
-                foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
-                {
-                    Console.WriteLine(error.ErrorMessage);
-                }
+                return View(model);
             }
 
-            return View(user);
+            if (await Client.EmailExistsAsync(model.Email, _userDal))
+            {
+                ModelState.AddModelError(string.Empty, "Cette adresse email est déjà utilisée.");
+                return View(model);
+            }
+
+            Client client = new Client(0, model.Firstname, model.Lastname, model.Email, model.Password, model.Phone);
+
+            try
+            {
+                await client.CreateAccountAsync(_userDal);
+                return RedirectToAction("Login");
+            }
+            catch
+            {
+                ModelState.AddModelError(string.Empty, "Impossible de créer le compte, veuillez réessayer.");
+                return View(model);
+            }
         }
 
         [HttpGet]
@@ -50,23 +58,19 @@ namespace Collect_Go2._0.Controllers
             return View();
         }
 
-
-
         [HttpPost]
         public async Task<IActionResult> Login(string email, string password)
         {
-            UserRepository repository = new UserRepository();
-
-            User user = repository.GetUserByEmailAndPassword(email, password);
+            Models.User? user = await Models.User.LoginAsync(email, password, _userDal);
 
             if (user != null)
             {
                 var claims = new List<Claim>
-        {
-            new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-            new Claim(ClaimTypes.Name, user.Email),
-            new Claim(ClaimTypes.Role, user.Role)
-        };
+                {
+                    new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString()),
+                    new Claim(ClaimTypes.Name, user.Email),
+                    new Claim(ClaimTypes.Role, user.UserType)
+                };
 
                 var identity = new ClaimsIdentity(
                     claims,

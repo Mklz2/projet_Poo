@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Collect_Go2._0.Interfaces;
 
 namespace Collect_Go2._0.Models
 {
@@ -88,6 +89,11 @@ namespace Collect_Go2._0.Models
             Lastname = lastname;
             Email = email;
             Password = password;
+        }
+
+        public static Task<User?> LoginAsync(string email, string password, IUserDAL userDal)
+        {
+            return userDal.GetByEmailAndPasswordAsync(email, password);
         }
     }
 }

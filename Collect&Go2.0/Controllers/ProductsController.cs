@@ -1,4 +1,4 @@
-﻿using Collect_Go2._0.DAL;
+using Collect_Go2._0.Interfaces;
 using Collect_Go2._0.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -6,34 +6,42 @@ using Microsoft.AspNetCore.Mvc;
 namespace Collect_Go2._0.Controllers
 {
     [Authorize]
-    public class ProductController : Controller
+    public class ProductsController : Controller
     {
-        private ProductRepository _repository;
+        private readonly IProductDAL _productDal;
+        private readonly ICategoryDAL _categoryDal;
 
-        public ProductController()
+        public ProductsController(IProductDAL productDal, ICategoryDAL categoryDal)
         {
-            _repository = new ProductRepository();
+            _productDal = productDal;
+            _categoryDal = categoryDal;
         }
 
-        public IActionResult Index(int? categoryId)
+        public async Task<IActionResult> Index(int? categoryId)
         {
-            List<Product> product;
+            List<Product> products;
 
             if (categoryId.HasValue)
             {
-                product = _repository.GetProductByCategory(categoryId.Value);
+                Category? category = await Category.GetByIdAsync(categoryId.Value, _categoryDal);
+
+                if (category == null)
+                {
+                    return NotFound();
+                }
+
+                await category.LoadProductsAsync(_productDal);
+                products = category.Products;
             }
             else
             {
-                product = _repository.GetAllProduct();
+                products = await Product.GetAllAsync(_productDal);
             }
 
-            List<Category> categories = _repository.GetAllCategories();
-
-            ViewBag.Categories = categories;
+            ViewBag.Categories = await Category.GetAllAsync(_categoryDal);
             ViewBag.SelectedCategory = categoryId;
 
-            return View(product);
+            return View(products);
         }
     }
 }

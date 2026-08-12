@@ -97,6 +97,14 @@
             TotalAmount = GetTotal();
         }
 
+        public void RemoveItem(int productId)
+        {
+            OrderItems.RemoveAll(
+                item => item.Product?.ProductId == productId);
+
+            TotalAmount = GetTotal();
+        }
+
         public double GetTotal()
         {
             return OrderItems.Sum(

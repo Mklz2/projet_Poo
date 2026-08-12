@@ -1,4 +1,6 @@
-﻿namespace Collect_Go2._0.Models
+﻿using Collect_Go2._0.Interfaces;
+
+namespace Collect_Go2._0.Models
 {
     public class Client : User
     {
@@ -19,11 +21,6 @@
 
         public List<Order> Orders { get; set; } = new();
 
-        public Client()
-        {
-            UserType = "client";
-        }
-
         public Client(
             int userId,
             string firstname,
@@ -35,6 +32,16 @@
         {
             Phone = phone;
             UserType = "client";
+        }
+
+        public static Task<bool> EmailExistsAsync(string email, IUserDAL userDal)
+        {
+            return userDal.EmailExistsAsync(email);
+        }
+
+        public Task CreateAccountAsync(IUserDAL userDal)
+        {
+            return userDal.CreateAsync(this);
         }
     }
 }

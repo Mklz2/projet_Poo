@@ -1,4 +1,6 @@
-﻿namespace Collect_Go2._0.Models
+﻿using Collect_Go2._0.Interfaces;
+
+namespace Collect_Go2._0.Models
 {
     public class Product
     {
@@ -81,6 +83,21 @@
             Description = description;
             ImageUrl = imageUrl;
             Category = category;
+        }
+
+        public static Task<List<Product>> GetAllAsync(IProductDAL productDal)
+        {
+            return productDal.GetAllAsync();
+        }
+
+        public static Task<List<Product>> GetByCategoryAsync(int categoryId, IProductDAL productDal)
+        {
+            return productDal.GetByCategoryAsync(categoryId);
+        }
+
+        public static Task<Product?> GetByIdAsync(int productId, IProductDAL productDal)
+        {
+            return productDal.GetByIdAsync(productId);
         }
     }
 }

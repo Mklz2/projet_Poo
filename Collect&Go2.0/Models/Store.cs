@@ -1,4 +1,6 @@
-﻿namespace Collect_Go2._0.Models
+﻿using Collect_Go2._0.Interfaces;
+
+namespace Collect_Go2._0.Models
 {
     public class Store
     {
@@ -65,6 +67,16 @@
             Name = name;
             Address = address;
             City = city;
+        }
+
+        public static Task<List<Store>> GetAllAsync(IStoreDAL storeDal)
+        {
+            return storeDal.GetAllAsync();
+        }
+
+        public static Task<Store?> GetByIdAsync(int storeId, IStoreDAL storeDal)
+        {
+            return storeDal.GetByIdAsync(storeId);
         }
     }
 }

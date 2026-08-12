@@ -1,4 +1,4 @@
-﻿using Collect_Go2._0.DAL;
+using Collect_Go2._0.Interfaces;
 using Collect_Go2._0.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
@@ -8,11 +8,16 @@ namespace Collect_Go2._0.Controllers
     [Authorize]
     public class StoresController : Controller
     {
-        public IActionResult Index()
-        {
-            StoresRepository repository = new StoresRepository();
+        private readonly IStoreDAL _storeDal;
 
-            List<Store> stores = repository.GetAllStores();
+        public StoresController(IStoreDAL storeDal)
+        {
+            _storeDal = storeDal;
+        }
+
+        public async Task<IActionResult> Index()
+        {
+            List<Store> stores = await Store.GetAllAsync(_storeDal);
 
             return View(stores);
         }
