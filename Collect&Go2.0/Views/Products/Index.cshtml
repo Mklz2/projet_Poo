@@ -1,5 +1,5 @@
 ﻿
-@model List<Collect_Go2._0.Models.Products>
+@model List<Collect_Go2._0.Models.Product>
 
 @{
     ViewData["Title"] = "Produits";
@@ -120,16 +120,24 @@
                                 @product.Description
                             </p>
 
-                            <!-- Bouton -->
-                            <div class="d-grid mt-4">
+                            <!-- Ajouter au panier -->
+                            <form asp-controller="Cart" asp-action="Add" method="post" class="mt-4">
+                                <input type="hidden" name="productId" value="@product.ProductId" />
 
-                                <button type="button"
-                                        class="btn btn-primary"
-                                        disabled>
-                                    Ajouter au panier
-                                </button>
+                                <div class="input-group mb-2">
+                                    <input type="number"
+                                           name="quantity"
+                                           value="1"
+                                           min="1"
+                                           class="form-control" />
+                                </div>
 
-                            </div>
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-primary">
+                                        Ajouter au panier
+                                    </button>
+                                </div>
+                            </form>
 
                         </div>
 

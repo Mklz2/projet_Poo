@@ -37,9 +37,17 @@
                         {
                             <li class="nav-item">
                                 <a class="nav-link"
-                                   asp-controller="Store"
+                                   asp-controller="Stores"
                                    asp-action="Index">
                                     Magasins
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   asp-controller="Cart"
+                                   asp-action="Index">
+                                    🛒 Panier
                                 </a>
                             </li>
                         }
@@ -74,7 +82,7 @@
 
                             </li>
                         }
-                       @*  else
+                        else
                         {
                             <li class="nav-item">
                                 <a class="nav-link"
@@ -91,7 +99,7 @@
                                     Créer un compte
                                 </a>
                             </li>
-                        } *@
+                        }
 
                     </ul>
 
