@@ -71,8 +71,10 @@ namespace Collect_Go2._0.DAL
             }
         }
 
-        // Connexion : identifie le bon sous-type (Client / Cashier / OrderPicker) selon la table où l'UserId existe
-        public async Task<User?> GetByEmailAndPasswordAsync(string email, string password)
+        // Connexion : identifie le bon sous-type (Client / Cashier / OrderPicker) selon la table où l'UserId existe.
+        // Ne filtre que par email : la vérification du mot de passe (BCrypt) se fait dans User.LoginAsync,
+        // car un hash salé ne peut pas être comparé directement dans la clause WHERE.
+        public async Task<User?> GetByEmailAsync(string email)
         {
             string query = @"
                 SELECT u.UserId, u.Firstname, u.Lastname, u.Email, u.Password,
@@ -86,12 +88,11 @@ namespace Collect_Go2._0.DAL
                 LEFT JOIN Cashier ca ON ca.UserId = u.UserId
                 LEFT JOIN OrderPicker op ON op.UserId = u.UserId
                 LEFT JOIN Store s ON s.StoreId = ca.StoreId OR s.StoreId = op.StoreId
-                WHERE u.Email = @Email AND u.Password = @Password";
+                WHERE u.Email = @Email";
 
             using SqlConnection connection = new SqlConnection(_connectionString);
             using SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@Email", email);
-            command.Parameters.AddWithValue("@Password", password);
 
             await connection.OpenAsync();
 

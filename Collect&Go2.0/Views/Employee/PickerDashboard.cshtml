@@ -1,0 +1,55 @@
+@model List<Collect_Go2._0.Models.Order>
+
+@{
+    ViewData["Title"] = "Commandes à préparer";
+}
+
+<div class="container py-5">
+
+    <h1 class="fw-bold mb-4">Commandes à préparer pour demain</h1>
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info">Aucune commande à préparer pour demain.</div>
+    }
+
+    @foreach (var order in Model)
+    {
+        <div class="card mb-3 border-0 shadow-sm">
+            <div class="card-body">
+
+                <h5 class="fw-bold">
+                    Commande #@order.OrderId — @order.Client?.Firstname @order.Client?.Lastname
+                </h5>
+
+                <p class="text-muted">
+                    Créneau : @order.TimeSlot?.StartHour.ToString("HH:mm") - @order.TimeSlot?.EndHour.ToString("HH:mm")
+                </p>
+
+                <ul>
+                    @foreach (var item in order.OrderItems)
+                    {
+                        <li>@item.Quantity x @item.Product?.Name</li>
+                    }
+                </ul>
+
+                <form asp-controller="Employee" asp-action="MarkPrepared" method="post" class="row g-2 align-items-end">
+                    <input type="hidden" name="orderId" value="@order.OrderId" />
+
+                    <div class="col-auto">
+                        <label class="form-label">Nombre de caisses utilisées</label>
+                        <input type="number" name="numberOfBoxes" min="0" value="1" class="form-control" required />
+                    </div>
+
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-success">
+                            Marquer comme prête
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    }
+
+</div>

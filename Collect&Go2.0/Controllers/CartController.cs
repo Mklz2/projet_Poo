@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Collect_Go2._0.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "client")]
     public class CartController : Controller
     {
         private const string SessionKey = "Cart";

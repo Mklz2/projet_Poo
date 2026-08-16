@@ -69,8 +69,20 @@ namespace Collect_Go2._0.Controllers
                 {
                     new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString()),
                     new Claim(ClaimTypes.Name, user.Email),
-                    new Claim(ClaimTypes.Role, user.UserType)
+                    new Claim(ClaimTypes.Role, user.UserType),
+                    new Claim(ClaimTypes.GivenName, user.Firstname),
+                    new Claim(ClaimTypes.Surname, user.Lastname)
                 };
+
+                if (user is Client client)
+                {
+                    claims.Add(new Claim(ClaimTypes.MobilePhone, client.Phone));
+                }
+
+                if (user is Employee employee && employee.Store != null)
+                {
+                    claims.Add(new Claim("StoreId", employee.Store.StoreId.ToString()));
+                }
 
                 var identity = new ClaimsIdentity(
                     claims,
@@ -82,7 +94,12 @@ namespace Collect_Go2._0.Controllers
                     CookieAuthenticationDefaults.AuthenticationScheme,
                     principal);
 
-                return RedirectToAction("Index", "Stores");
+                if (user is Employee)
+                {
+                    return RedirectToAction("Dashboard", "Employee");
+                }
+
+                return RedirectToAction("Index", "Products");
             }
 
             ViewBag.Error = "Email ou mot de passe incorrect.";

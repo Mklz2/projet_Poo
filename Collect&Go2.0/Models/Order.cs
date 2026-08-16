@@ -1,4 +1,6 @@
-﻿namespace Collect_Go2._0.Models
+﻿using Collect_Go2._0.Interfaces;
+
+namespace Collect_Go2._0.Models
 {
     public class Order
     {
@@ -46,6 +48,8 @@
         }
 
         public OrderStatus Status { get; set; }
+
+        public int? ReturnedBoxes { get; set; }
 
         public Client? Client { get; set; }
 
@@ -109,6 +113,61 @@
         {
             return OrderItems.Sum(
                 item => item.GetOrderItemTotal());
+        }
+
+        public string GetStatusLabel()
+        {
+            return Status switch
+            {
+                OrderStatus.Placed => "En attente de préparation",
+                OrderStatus.Prepared => "Prête, à retirer",
+                OrderStatus.Honored => "Retirée",
+                _ => Status.ToString()
+            };
+        }
+
+        // Réhydrate le montant final (frais inclus) tel que persisté en BDD, une fois la commande honorée
+        public void SetPersistedTotal(double totalAmount)
+        {
+            TotalAmount = totalAmount;
+        }
+
+        public const double ServiceFee = 5.95;
+
+        // Produits + frais de service + caution des caisses fournies - caisses rendues
+        public double GetFinalTotal(int returnedBoxes)
+        {
+            return GetTotal() + ServiceFee + (ServiceFee * NumberOfBoxes) - (ServiceFee * returnedBoxes);
+        }
+
+        public Task PlaceOrderAsync(IOrderDAL orderDal)
+        {
+            return orderDal.CreateAsync(this);
+        }
+
+        public Task MarkPreparedAsync(IOrderDAL orderDal, int numberOfBoxes)
+        {
+            return orderDal.MarkPreparedAsync(OrderId, numberOfBoxes);
+        }
+
+        public Task ApproveOrderAsync(IOrderDAL orderDal, int returnedBoxes)
+        {
+            return orderDal.ApproveOrderAsync(OrderId, returnedBoxes, GetFinalTotal(returnedBoxes));
+        }
+
+        public static Task<Order?> GetByIdAsync(int orderId, IOrderDAL orderDal)
+        {
+            return orderDal.GetByIdAsync(orderId);
+        }
+
+        public static Task<List<Order>> GetByClientAsync(int clientId, IOrderDAL orderDal)
+        {
+            return orderDal.GetByClientAsync(clientId);
+        }
+
+        public static Task<List<Order>> GetByStoreAndStatusAsync(int storeId, OrderStatus status, DateTime date, IOrderDAL orderDal)
+        {
+            return orderDal.GetByStoreAndStatusAsync(storeId, status, date);
         }
     }
 }

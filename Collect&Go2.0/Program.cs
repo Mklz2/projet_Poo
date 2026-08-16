@@ -1,6 +1,7 @@
 using Collect_Go2._0.DAL;
 using Collect_Go2._0.Interfaces;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Mvc;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +11,8 @@ builder.Services.AddTransient<IUserDAL, UserDAL>();
 builder.Services.AddTransient<IProductDAL, ProductDAL>();
 builder.Services.AddTransient<ICategoryDAL, CategoryDAL>();
 builder.Services.AddTransient<IStoreDAL, StoreDAL>();
+builder.Services.AddTransient<ITimeSlotDAL, TimeSlotDAL>();
+builder.Services.AddTransient<IOrderDAL, OrderDAL>();
 
 //Service Authentification
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
@@ -30,7 +33,11 @@ builder.Services.AddSession(options =>
 });
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+// Vérifie automatiquement le jeton anti-CSRF sur toutes les actions POST/PUT/DELETE/PATCH
+builder.Services.AddControllersWithViews(options =>
+{
+    options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
+});
 
 var app = builder.Build();
 

@@ -138,13 +138,27 @@ INSERT INTO Product (Name, Price, Description, ImageUrl, CategoryId) VALUES
     (N'Frites surgelees', 2.30, N'Sachet 1kg', '/images/frites.jpg', (SELECT CategoryId FROM Category WHERE Name = N'Surgeles'));
 GO
 
+-- ============================================================
+-- COMPTES DE TEST (mot de passe en clair identique pour tous : Test1234!)
+-- Le champ Password stocke le hash BCrypt de ce mot de passe.
+--
+--   Role           Email                          Magasin
+--   -------------- ------------------------------ -----------------
+--   Client         client.test@clickgo.test       -
+--   Caissier       alice.cashier@clickgo.test      ClickGo Charleroi
+--   Préparateur    bruno.picker@clickgo.test       ClickGo Charleroi
+--   Caissier       chloe.cashier@clickgo.test      ClickGo Mons
+--   Préparateur    david.picker@clickgo.test       ClickGo Mons
+--
+-- Un client peut aussi être créé librement via la page d'inscription de l'application.
+-- ============================================================
+
 -- Employés : encodés directement en BDD (pas d'interface admin, conforme à l'énoncé)
--- Mot de passe de test, EN CLAIR pour l'instant (BCrypt pas encore branché) : Test1234!
 INSERT INTO Users (Firstname, Lastname, Email, Password) VALUES
-    (N'Alice', N'Caissiere', N'alice.cashier@clickgo.test', N'Test1234!'),
-    (N'Bruno', N'Preparateur', N'bruno.picker@clickgo.test', N'Test1234!'),
-    (N'Chloe', N'Caissiere', N'chloe.cashier@clickgo.test', N'Test1234!'),
-    (N'David', N'Preparateur', N'david.picker@clickgo.test', N'Test1234!');
+    (N'Alice', N'Caissiere', N'alice.cashier@clickgo.test', N'$2b$12$syEiU306U2WTzjwHaR4Te.dTXycyEEusyg9SFTCPEUS.qJoRF/Zf6'),
+    (N'Bruno', N'Preparateur', N'bruno.picker@clickgo.test', N'$2b$12$syEiU306U2WTzjwHaR4Te.dTXycyEEusyg9SFTCPEUS.qJoRF/Zf6'),
+    (N'Chloe', N'Caissiere', N'chloe.cashier@clickgo.test', N'$2b$12$syEiU306U2WTzjwHaR4Te.dTXycyEEusyg9SFTCPEUS.qJoRF/Zf6'),
+    (N'David', N'Preparateur', N'david.picker@clickgo.test', N'$2b$12$syEiU306U2WTzjwHaR4Te.dTXycyEEusyg9SFTCPEUS.qJoRF/Zf6');
 GO
 
 INSERT INTO Cashier (UserId, StoreId, HiringDate) VALUES
@@ -155,6 +169,15 @@ GO
 INSERT INTO OrderPicker (UserId, StoreId, HiringDate) VALUES
     ((SELECT UserId FROM Users WHERE Email = N'bruno.picker@clickgo.test'), (SELECT StoreId FROM Store WHERE Name = N'ClickGo Charleroi'), '2025-02-01'),
     ((SELECT UserId FROM Users WHERE Email = N'david.picker@clickgo.test'), (SELECT StoreId FROM Store WHERE Name = N'ClickGo Mons'), '2025-04-01');
+GO
+
+-- Client de test (même mot de passe que les employés : Test1234!)
+INSERT INTO Users (Firstname, Lastname, Email, Password) VALUES
+    (N'Test', N'Client', N'client.test@clickgo.test', N'$2b$12$syEiU306U2WTzjwHaR4Te.dTXycyEEusyg9SFTCPEUS.qJoRF/Zf6');
+GO
+
+INSERT INTO Client (UserId, Phone) VALUES
+    ((SELECT UserId FROM Users WHERE Email = N'client.test@clickgo.test'), N'0470000000');
 GO
 
 -- Créneaux horaires : 7 jours à partir de demain (règle "pas de réservation le jour même"), 9h-18h, tranches d'1h

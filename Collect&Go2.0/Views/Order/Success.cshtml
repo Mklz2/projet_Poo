@@ -1,0 +1,15 @@
+@{
+    ViewData["Title"] = "Commande confirmée";
+}
+
+<div class="container py-5 text-center">
+    <div class="fs-1 mb-3">✅</div>
+    <h1 class="fw-bold">Commande confirmée !</h1>
+    <p class="text-muted">
+        Votre commande a bien été enregistrée. Rendez-vous au magasin choisi, sur le créneau réservé.
+    </p>
+
+    <a asp-controller="Products" asp-action="Index" class="btn btn-primary mt-3">
+        Retour aux produits
+    </a>
+</div>

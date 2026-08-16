@@ -33,13 +33,13 @@
 
                     <ul class="navbar-nav me-auto">
 
-                        @if (User.Identity != null && User.Identity.IsAuthenticated)
+                        @if (User.Identity != null && User.Identity.IsAuthenticated && User.IsInRole("client"))
                         {
                             <li class="nav-item">
                                 <a class="nav-link"
-                                   asp-controller="Stores"
+                                   asp-controller="Products"
                                    asp-action="Index">
-                                    Magasins
+                                    Produits
                                 </a>
                             </li>
 
@@ -48,6 +48,24 @@
                                    asp-controller="Cart"
                                    asp-action="Index">
                                     🛒 Panier
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   asp-controller="Order"
+                                   asp-action="History">
+                                    Mes commandes
+                                </a>
+                            </li>
+                        }
+                        else if (User.Identity != null && User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   asp-controller="Employee"
+                                   asp-action="Dashboard">
+                                    Tableau de bord
                                 </a>
                             </li>
                         }

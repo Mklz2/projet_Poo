@@ -1,0 +1,60 @@
+@model List<Collect_Go2._0.Models.Order>
+@using Collect_Go2._0.Models
+
+@{
+    ViewData["Title"] = "Mes commandes";
+}
+
+<div class="container py-5">
+
+    <h1 class="fw-bold mb-4">Mes commandes</h1>
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info">
+            Vous n'avez pas encore passé de commande.
+        </div>
+    }
+
+    @foreach (var order in Model)
+    {
+        <div class="card mb-3 border-0 shadow-sm">
+            <div class="card-body">
+
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                    <h5 class="fw-bold mb-0">
+                        Commande #@order.OrderId — @order.Store?.Name
+                    </h5>
+                    <span class="badge bg-secondary">@order.GetStatusLabel()</span>
+                </div>
+
+                <p class="text-muted mb-2">
+                    Créneau : @order.TimeSlot?.Date.ToString("dd/MM/yyyy")
+                    @order.TimeSlot?.StartHour.ToString("HH:mm") - @order.TimeSlot?.EndHour.ToString("HH:mm")
+                </p>
+
+                <ul class="mb-2">
+                    @foreach (var item in order.OrderItems)
+                    {
+                        <li>@item.Quantity x @item.Product?.Name</li>
+                    }
+                </ul>
+
+                @if (order.Status == OrderStatus.Honored)
+                {
+                    <div class="fw-bold">
+                        Montant payé : @order.TotalAmount.ToString("0.00") €
+                    </div>
+                }
+                else
+                {
+                    <div class="text-muted">
+                        Total produits (hors frais de service) : @order.GetTotal().ToString("0.00") €
+                    </div>
+                }
+
+            </div>
+        </div>
+    }
+
+</div>

@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Collect_Go2._0.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "client")]
     public class ProductsController : Controller
     {
         private readonly IProductDAL _productDal;

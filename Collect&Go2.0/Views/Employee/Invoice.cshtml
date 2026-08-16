@@ -1,0 +1,50 @@
+@model Collect_Go2._0.Models.Order
+
+@{
+    ViewData["Title"] = "Facture";
+    double baseTotal = Model.GetFinalTotal(0);
+}
+
+<div class="container py-5">
+
+    <h1 class="fw-bold mb-4">Facture — Commande #@Model.OrderId</h1>
+
+    <p>Client : @Model.Client?.Firstname @Model.Client?.Lastname</p>
+    <p>Caisses fournies par le préparateur : @Model.NumberOfBoxes</p>
+
+    <div class="card border-0 shadow-sm p-4" style="max-width: 480px;">
+
+        <div class="fs-4 fw-bold mb-3" id="totalDisplay">
+            Montant à payer : @baseTotal.ToString("0.00") €
+        </div>
+
+        <form asp-controller="Employee" asp-action="Approve" method="post">
+            <input type="hidden" name="orderId" value="@Model.OrderId" />
+
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Caisses rendues par le client</label>
+                <input type="number" id="returnedBoxes" name="returnedBoxes" min="0" value="0" class="form-control" />
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">
+                Encaisser et marquer honorée
+            </button>
+        </form>
+
+    </div>
+
+</div>
+
+@section Scripts {
+    <script>
+        const orderId = @Model.OrderId;
+
+        document.getElementById('returnedBoxes').addEventListener('input', async function () {
+            const returned = parseInt(this.value) || 0;
+            const response = await fetch(`/Employee/PreviewTotal?orderId=${orderId}&returnedBoxes=${returned}`);
+            const data = await response.json();
+            document.getElementById('totalDisplay').textContent =
+                'Montant à payer : ' + data.total.toFixed(2).replace('.', ',') + ' €';
+        });
+    </script>
+}

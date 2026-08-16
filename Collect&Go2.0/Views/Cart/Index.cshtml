@@ -51,8 +51,14 @@
             </tbody>
         </table>
 
-        <div class="text-end fs-5 fw-bold">
+        <div class="text-end fs-5 fw-bold mb-3">
             Total : @Model.GetTotal().ToString("0.00") €
+        </div>
+
+        <div class="text-end">
+            <a asp-controller="Order" asp-action="Checkout" class="btn btn-primary btn-lg">
+                Valider la commande
+            </a>
         </div>
     }
 

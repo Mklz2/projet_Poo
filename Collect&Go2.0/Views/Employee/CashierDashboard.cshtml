@@ -1,0 +1,44 @@
+@model List<Collect_Go2._0.Models.Order>
+
+@{
+    ViewData["Title"] = "Commandes à remettre";
+}
+
+<div class="container py-5">
+
+    <h1 class="fw-bold mb-4">Commandes à remettre aujourd'hui</h1>
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info">Aucune commande à remettre aujourd'hui.</div>
+    }
+    else
+    {
+        <table class="table align-middle">
+            <thead>
+                <tr>
+                    <th>Commande</th>
+                    <th>Client</th>
+                    <th>Créneau</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var order in Model)
+                {
+                    <tr>
+                        <td>#@order.OrderId</td>
+                        <td>@order.Client?.Firstname @order.Client?.Lastname</td>
+                        <td>@order.TimeSlot?.StartHour.ToString("HH:mm") - @order.TimeSlot?.EndHour.ToString("HH:mm")</td>
+                        <td>
+                            <a asp-controller="Employee" asp-action="Invoice" asp-route-orderId="@order.OrderId" class="btn btn-sm btn-primary">
+                                Voir la facture
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+
+</div>

@@ -21,6 +21,8 @@ namespace Collect_Go2._0.Models
 
         public List<Order> Orders { get; set; } = new();
 
+        public override string UserType => "client";
+
         public Client(
             int userId,
             string firstname,
@@ -31,7 +33,6 @@ namespace Collect_Go2._0.Models
             : base(userId, firstname, lastname, email, password)
         {
             Phone = phone;
-            UserType = "client";
         }
 
         public static Task<bool> EmailExistsAsync(string email, IUserDAL userDal)
@@ -41,6 +42,7 @@ namespace Collect_Go2._0.Models
 
         public Task CreateAccountAsync(IUserDAL userDal)
         {
+            Password = BCrypt.Net.BCrypt.HashPassword(Password);
             return userDal.CreateAsync(this);
         }
     }

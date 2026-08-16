@@ -78,9 +78,7 @@ namespace Collect_Go2._0.Models
             set => password = value;
         }
 
-        public string UserType { get; set; } = string.Empty;
-
-
+        public abstract string UserType { get; }
 
         public User(int userId,string firstname, string lastname, string email, string password)
         {
@@ -91,9 +89,14 @@ namespace Collect_Go2._0.Models
             Password = password;
         }
 
-        public static Task<User?> LoginAsync(string email, string password, IUserDAL userDal)
+        public static async Task<User?> LoginAsync(string email, string password, IUserDAL userDal)
         {
-            return userDal.GetByEmailAndPasswordAsync(email, password);
+            User? user = await userDal.GetByEmailAsync(email);
+
+            if (user == null || !BCrypt.Net.BCrypt.Verify(password, user.Password))
+                return null;
+
+            return user;
         }
     }
 }

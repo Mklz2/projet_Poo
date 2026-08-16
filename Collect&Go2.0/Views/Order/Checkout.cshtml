@@ -1,0 +1,143 @@
+@model Collect_Go2._0.Models.Order
+
+@{
+    ViewData["Title"] = "Confirmer ma commande";
+    var stores = (List<Collect_Go2._0.Models.Store>)ViewBag.Stores;
+}
+
+<div class="container py-5">
+
+    <h1 class="fw-bold mb-4">Confirmer ma commande</h1>
+
+    <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
+    <div class="row g-4">
+
+        <div class="col-md-7">
+            <h5 class="fw-bold mb-3">Récapitulatif</h5>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Produit</th>
+                        <th>Quantité</th>
+                        <th>Sous-total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.OrderItems)
+                    {
+                        <tr>
+                            <td>@item.Product?.Name</td>
+                            <td>@item.Quantity</td>
+                            <td>@item.GetOrderItemTotal().ToString("0.00") €</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+            <div class="text-end fs-5 fw-bold">
+                Total produits : @Model.GetTotal().ToString("0.00") €
+            </div>
+
+            <p class="text-muted mt-2">
+                Frais de service et éventuelle caution des caisses calculés au retrait, en magasin.
+            </p>
+        </div>
+
+        <div class="col-md-5">
+
+            <form asp-controller="Order" asp-action="PlaceOrder" method="post" id="checkoutForm">
+
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Magasin</label>
+                    <select id="storeSelect" name="storeId" class="form-select" required>
+                        <option value="">Choisir un magasin</option>
+                        @foreach (var store in stores)
+                        {
+                            <option value="@store.StoreId">@store.Name (@store.City)</option>
+                        }
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Date de retrait</label>
+                    <select id="dateSelect" class="form-select" disabled required>
+                        <option value="">Choisir d'abord un magasin</option>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label fw-semibold">Créneau horaire</label>
+                    <select id="timeSlotSelect" name="timeSlotId" class="form-select" disabled required>
+                        <option value="">Choisir d'abord une date</option>
+                    </select>
+                </div>
+
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary btn-lg">
+                        Confirmer la commande
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+@section Scripts {
+    <script>
+        const storeSelect = document.getElementById('storeSelect');
+        const dateSelect = document.getElementById('dateSelect');
+        const timeSlotSelect = document.getElementById('timeSlotSelect');
+
+        storeSelect.addEventListener('change', async function () {
+            dateSelect.innerHTML = '<option value="">Chargement...</option>';
+            dateSelect.disabled = true;
+            timeSlotSelect.innerHTML = '<option value="">Choisir d\'abord une date</option>';
+            timeSlotSelect.disabled = true;
+
+            if (!this.value) {
+                dateSelect.innerHTML = '<option value="">Choisir d\'abord un magasin</option>';
+                return;
+            }
+
+            const response = await fetch(`/Order/GetDates?storeId=${this.value}`);
+            const dates = await response.json();
+
+            dateSelect.innerHTML = '<option value="">Choisir une date</option>';
+            dates.forEach(d => {
+                const opt = document.createElement('option');
+                opt.value = d.value;
+                opt.textContent = d.label;
+                dateSelect.appendChild(opt);
+            });
+            dateSelect.disabled = false;
+        });
+
+        dateSelect.addEventListener('change', async function () {
+            timeSlotSelect.innerHTML = '<option value="">Chargement...</option>';
+            timeSlotSelect.disabled = true;
+
+            if (!this.value) {
+                timeSlotSelect.innerHTML = '<option value="">Choisir d\'abord une date</option>';
+                return;
+            }
+
+            const response = await fetch(`/Order/GetTimeSlots?storeId=${storeSelect.value}&date=${this.value}`);
+            const slots = await response.json();
+
+            timeSlotSelect.innerHTML = '<option value="">Choisir un créneau</option>';
+            slots.forEach(s => {
+                const opt = document.createElement('option');
+                opt.value = s.timeSlotId;
+                opt.textContent = `${s.label} (${s.placesLeft} places restantes)`;
+                timeSlotSelect.appendChild(opt);
+            });
+            timeSlotSelect.disabled = false;
+        });
+    </script>
+}

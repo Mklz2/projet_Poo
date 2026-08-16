@@ -2,6 +2,8 @@ namespace Collect_Go2._0.Models
 {
     public class Cashier : Employee
     {
+        public override string UserType => "cashier";
+
         public Cashier(
             int userId,
             string firstname,
@@ -19,7 +21,6 @@ namespace Collect_Go2._0.Models
                 store,
                 hiringDate)
         {
-            UserType = "cashier";
         }
     }
 }

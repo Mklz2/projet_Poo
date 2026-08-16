@@ -1,4 +1,6 @@
-﻿namespace Collect_Go2._0.Models
+﻿using Collect_Go2._0.Interfaces;
+
+namespace Collect_Go2._0.Models
 {
     public class TimeSlot
     {
@@ -54,6 +56,8 @@
 
         public const int MaxReservation = 10;
 
+        public int PlacesLeft => MaxReservation - ReservationCount;
+
         public Store? Store { get; set; }
 
         public List<Order> Orders { get; set; } = new();
@@ -78,6 +82,16 @@
         public bool IsAvailable()
         {
             return ReservationCount < MaxReservation;
+        }
+
+        public static Task<List<TimeSlot>> GetAvailableAsync(int storeId, ITimeSlotDAL timeSlotDal)
+        {
+            return timeSlotDal.GetAvailableAsync(storeId);
+        }
+
+        public static Task<TimeSlot?> GetByIdAsync(int timeSlotId, ITimeSlotDAL timeSlotDal)
+        {
+            return timeSlotDal.GetByIdAsync(timeSlotId);
         }
     }
 }
